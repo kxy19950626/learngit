@@ -11,13 +11,15 @@
 <script type="text/javascript">
 var t=document.getElementById('test');
 var hammerTest = new Hammer(t);
-// hammerTest.get('swipe').set({
-//     direction: Hammer.DIRECTION_DOWN
-// });
+hammerTest.get('swipe').set({
+    direction: Hammer.DIRECTION_DOWN
+});
 hammerTest.on('tap', function(ev) {
 t.style.backgroundColor="yellow";
 });
-
+hammerTest.on('swipe', function(ev) {
+t.style.backgroundColor="blue";
+});
 	
 	
 </script>	
