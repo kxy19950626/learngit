@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="test" style="background-color:  red; width: 799px; height: 800px; ">eddd</div>
+
+<script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+<script type="text/javascript">
+var hammerTest = new Hammer(document.getElementById('test'));
+hammerTest.get('swipe').set({
+    direction: Hammer.DIRECTION_DOWN
+});
+hammerTest.on('swipe', function(ev) {
+alert(2);
+});
+
+	
+	
+</script>	
+</body>
+</html>
