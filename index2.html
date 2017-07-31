@@ -9,12 +9,13 @@
 
 <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
 <script type="text/javascript">
-var hammerTest = new Hammer(document.getElementById('test'));
+var t=document.getElementById('test');
+var hammerTest = new Hammer(t);
 hammerTest.get('swipe').set({
     direction: Hammer.DIRECTION_DOWN
 });
 hammerTest.on('swipe', function(ev) {
-alert(2);
+t.style.backgroundColor="yellow";
 });
 
 	
